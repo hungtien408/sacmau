@@ -224,14 +224,16 @@
     font-size: 0;
     top: 50%;
     position: absolute;
-    height: 46px;
+    /*height: 46px;*/
+    height: 106px;
     margin-top: -23px;
     overflow: hidden;
-    width: 15px;
+    /*width: 15px;*/
+    width: 33px;
     z-index: 99;
 }
 .slick-slider .slick-arrow {
-    background-image: url(../images/control-b2.png);
+    background-image: url(../images/control-b.png);
 }
 .slick-slider .slick-prev {
     background-position: left top;

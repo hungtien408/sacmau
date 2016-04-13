@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site-product.master" AutoEventWireup="true"
     CodeFile="san-pham-chi-tiet.aspx.cs" Inherits="san_pham_chi_tiet" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">

@@ -196,40 +196,13 @@
             <hr />
             <!--main-->
             <div id="mainContent">
-                <div id="banner">
-                    <div id="sliderBanner">
-                        <asp:ListView ID="lstBanner" runat="server" DataSourceID="odsBanner" EnableModelValidation="True">
-                            <ItemTemplate>
-                                <div class="slide">
-                                    <img alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/banner-img-1.jpg" %>'
-                                        runat="server" /></div>
-                            </ItemTemplate>
-                            <LayoutTemplate>
-                                <span runat="server" id="itemPlaceholder" />
-                            </LayoutTemplate>
-                        </asp:ListView>
-                        <asp:ObjectDataSource ID="odsBanner" runat="server" SelectMethod="AdsBannerSelectAll"
-                            TypeName="TLLib.AdsBanner">
-                            <SelectParameters>
-                                <asp:Parameter Name="StartRowIndex" Type="String" />
-                                <asp:Parameter Name="EndRowIndex" Type="String" />
-                                <asp:Parameter DefaultValue="5" Name="AdsCategoryID" Type="String" />
-                                <asp:Parameter Name="CompanyName" Type="String" />
-                                <asp:Parameter Name="Website" Type="String" />
-                                <asp:Parameter Name="FromDate" Type="String" />
-                                <asp:Parameter Name="ToDate" Type="String" />
-                                <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
-                                <asp:Parameter Name="Priority" Type="String" />
-                                <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
-                            </SelectParameters>
-                        </asp:ObjectDataSource>
-                    </div>
-                </div>
+                <asp:ContentPlaceHolder ID="cphBanner" runat="server">
+                </asp:ContentPlaceHolder>
                 <div class="slider-text">
                     <ul id="bxsliderText">
                         <li>
                             <div class="text-center text-box">
-                                Cung cấp - Tư vấn - Thiết kế - Thi công</div>
+                                Chuyên cung cấp - Tư vấn - Thiết kế - Thi công - Sản phẩm bảo hành 8 năm - Phục vụ tư vấn xem mẫu tận nơi </div>
                         </li>
                     </ul>
                 </div>
@@ -317,7 +290,7 @@
                                         <asp:ListView ID="lstQuangCao" runat="server" DataSourceID="odsQuangCao" EnableModelValidation="True">
                                             <ItemTemplate>
                                                 <div class="slide">
-                                                    <a href="javascript:void(0);" class="ads-box">
+                                                    <a href='<%# string.IsNullOrEmpty(Eval("Website").ToString()) ? "javascript:void(0);" : Eval("Website") %>' class="ads-box">
                                                         <img alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/adv-img-1.jpg" %>'
                                                             runat="server" /></a>
                                                 </div>
