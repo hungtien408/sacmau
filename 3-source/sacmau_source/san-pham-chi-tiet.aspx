@@ -79,7 +79,7 @@
                         <%# Eval("Tag") %></div>
                     <div class="desription">
                         <ul class="list-info">
-                            <li><strong>Thương hiệu:</strong> Manufacturer</li>
+                            <%--<li><strong>Thương hiệu:</strong> Manufacturer</li>--%>
                             <li><strong>Mã sản phẩm (ID):</strong>
                                 <%# Eval("Tag") %></li>
                             <li><strong>Giá bán:</strong> <del>

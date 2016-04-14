@@ -202,7 +202,15 @@
                     <ul id="bxsliderText">
                         <li>
                             <div class="text-center text-box">
-                                Chuyên cung cấp - Tư vấn - Thiết kế - Thi công - Sản phẩm bảo hành 8 năm - Phục vụ tư vấn xem mẫu tận nơi </div>
+                                Chuyên cung cấp - Tư vấn - Thiết kế - Thi công </div>
+                        </li>
+                        <li>
+                            <div class="text-center text-box">
+                                Sản phẩm được bảo hành 8 năm </div>
+                        </li>
+                        <li>
+                            <div class="text-center text-box">
+                                Phục vụ tư vấn xem mẫu tận nơi </div>
                         </li>
                     </ul>
                 </div>
@@ -342,9 +350,9 @@
                         <div class="col-md-6">
                             <div class="logo">
                                 <a href="javascript:void(0);">
-                                    <img src="assets/images/logo2.png" alt="" /></a></div>
-                            <h4>
-                                TRANH - GIẤY DÁN TƯỜNG SẮC MÀU</h4>
+                                    <img class="img-responsive" src="assets/images/logo2.png" alt="" /></a></div>
+                            <%--<h4>
+                                TRANH - GIẤY DÁN TƯỜNG SẮC MÀU</h4>--%>
                             <ul class="list-address">
                                 <li><span class="glyphicon glyphicon-map-marker"></span>702 Tên lửa, P. Bình Trị Đông
                                     B, Q.Bình Tân, Tp.HCM</li>
