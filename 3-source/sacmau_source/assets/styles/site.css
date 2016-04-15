@@ -921,7 +921,6 @@ body .mobilep-right {
         width: 143px;*/
         margin-left: 6%;
         width: 280px;
-        padding-bottom: 10px;
     }
     #footer, #footer a {
         color: #f0f0f0;
@@ -929,13 +928,17 @@ body .mobilep-right {
         line-height: 20px;
     }
         #footer h4 {
-            /*color: #f7f7f7;*/
-            color: #ed2724;
-            font-size: 24px;
-            font-weight: 700;
+            color: #f7f7f7;
+            /*color: #2e3192;*/
+            font-size: 18px;
+            font-weight: 400;
             line-height: 30px;
             padding: 10px 0;
         }
+         /*#footer h4 > span {
+             color: #ed2724;
+             font-size: 20px;
+         }*/
 .list-address {
     list-style: none;
     padding: 0;
