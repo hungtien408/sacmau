@@ -6,9 +6,9 @@ var rendererOptions = {
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 //Thay dia chi web
-var endAddress = "10.752911,106.610009";
+var endAddress = "10.755344, 106.606233";
 //Thay toa do
-var lat = 10.752911, long = 106.610009;
+var lat = 10.755344, long = 106.606233;
 window.onload = function () {
     //init direction
     directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);

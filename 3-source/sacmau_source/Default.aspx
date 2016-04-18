@@ -22,6 +22,9 @@
                 <ItemTemplate>
                     <div class="slide">
                         <div class="product-box">
+                            <div class="icon-pro">
+                                <img class="img-responsive" src="assets/images/logo2.png" alt="" />
+                            </div>
                             <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'
                                 class="product-img"><span class=" box-img fullbox-img cover-img">
                                     <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
@@ -76,6 +79,9 @@
         <ItemTemplate>
             <div class="col-lg-3 col-xs-4 element-item">
                 <div class="product-box">
+                    <div class="icon-pro">
+                        <img class="img-responsive" src="assets/images/logo2.png" alt="" />
+                    </div>
                     <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'
                         class="product-img"><span class=" box-img fullbox-img cover-img">
                             <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'

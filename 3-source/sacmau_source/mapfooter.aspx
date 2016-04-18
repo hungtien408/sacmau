@@ -12,8 +12,8 @@
         mapfooter();
         /*============================*/
         function mapfooter() {
-            var lat = 10.752911;
-            var long = 106.610009;
+            var lat = 10.755344;
+            var long = 106.606233;
             var myCenter = new google.maps.LatLng(lat, long);
 
             function initialize() {
