@@ -51,8 +51,21 @@ function myfunload() {
         fade: true,
         cssEase: 'linear'
     });
+    $(".fancybox").fancybox({
+        padding: 10,
+        wrapCSS: 'pro-popup',
+        openEffect: 'elastic',
+        closeEffect: 'elastic',
+
+        helpers: {
+            title: {
+                type: 'inside'
+            }
+        }
+    });
     if ($('#silderProduct').size() == 1) {
         var silderProduct = $('#silderProduct').imagesLoaded(function () {
+
             silderProduct.slick({
                 autoplay: true,
                 autoplaySpeed: 3000,
@@ -88,9 +101,9 @@ function myfunload() {
                   // instead of a settings object
                 ]
             });
-            sliderParent.textHeight({
+            silderProduct.textHeight({
                 activetit: true,
-                listcss: [{ cssname: ".product-img" }, { cssname: ".product-name" }],
+                listcss: [{ cssname: ".product-img" }, { cssname: ".product-img" }],
                 desbool: false,
                 listpos: [{ cssnamepos: ".description", cssheightnum: "3" }],
                 tbrow: false,
@@ -104,33 +117,39 @@ function myfunload() {
         speed: 16000
     });
     if ($("#sliderDetails").size() == 1) {
-        var bigimg = $(".small-img:first").attr("href");
-        var smallimg = $(".small-img:first").attr("data-img");
-        $(".cloud-zoom").attr("href", bigimg).find("img:first").attr("src", smallimg);
-        jQuery('.cloud-zoom').CloudZoom();
-
-        $('#sliderDetails .slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            infinite: false,
-            fade: true,
-            asNavFor: '#sliderDetails .slider-nav'
-        });
-        $('#sliderDetails .slider-nav').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            asNavFor: '#sliderDetails .slider-for',
-            dots: false,
-            infinite: false,
-            //centerMode: true,
-            focusOnSelect: true
-        });
-        $('#sliderDetails .slider-nav').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            var bigimg = $("#sliderDetails .slider-nav .slick-slide:eq(" + nextSlide + ") .small-img").attr("href");
-            var smallimg = $("#sliderDetails .slider-nav .slick-slide:eq(" + nextSlide + ") .small-img").attr("data-img");
-            $(".cloud-zoom").attr("href", bigimg).find("img:first").attr("src", smallimg);
-            jQuery('.cloud-zoom').CloudZoom();
+        var sliderdetails = $('#sliderDetails').imagesLoaded(function () {
+            sliderdetails.find(".slider-for").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                infinite: false,
+                fade: true,
+                asNavFor: '#sliderDetails .slider-nav'
+            }).textHeight({
+                activetit: true,
+                listcss: [{ cssname: ".images-box" }],
+                desbool: false,
+                listpos: [{ cssnamepos: ".description", cssheightnum: "3" }],
+                tbrow: false,
+                csstr: ".element-item",
+                max: true
+            });
+            sliderdetails.find(".slider-nav").slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '#sliderDetails .slider-for',
+                dots: false,
+                infinite: false,
+                focusOnSelect: true
+            }).textHeight({
+                activetit: true,
+                listcss: [{ cssname: ".small-img span" }],
+                desbool: false,
+                listpos: [{ cssnamepos: ".description", cssheightnum: "3" }],
+                tbrow: false,
+                csstr: ".element-item",
+                max: false
+            });
         });
     }
     mapfooterre();
@@ -175,7 +194,7 @@ function myListTb() {
                     itemSelector: '.element-item',
                     layoutMode: 'fitRows'
                 });
-            }, 300);
+            }, 100);
         });
     }
 }

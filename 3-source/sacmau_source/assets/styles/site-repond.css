@@ -135,6 +135,9 @@
      {
          display: block !important;
      }
+    .wrapper-menu {
+        background: #1c9600;
+    }
     .aside-box {
         margin-bottom: 20px;
     }
@@ -199,18 +202,18 @@
     .hotline-w {
         display: none;
     }
-    .wrapper-menu {
-        background: #1c9600;
-    }
     #header .form-search, #header .form-search .search-text {
         background-color: #1c9600;
     }
     #header .form-search {
         float: left;
+        margin-right: 0;
         width: 200px;
     }
     .menu-mo {
         float: right;
+        margin-right: 10px;
+        margin-left: 0;
     }
     #header .form-search .search-btn {
         background-position: left bottom;
@@ -265,6 +268,9 @@
     }
     .list-address li {
         padding-left: 25px;
+    }
+    .wrap-contact, .wrapper-text > span {
+        padding: 10px;
     }
 }
 @media (max-width: 479px)

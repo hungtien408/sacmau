@@ -264,18 +264,27 @@
     width: 100%;
 }
     .small-img span {
-        border: solid 1px #fff;
+        border: solid 1px #000;
+        background-color: #fff;
         display: block;
-    width: 100%;
+        overflow: hidden;
+        width: 100%;
     }
     .small-img img {
         display: block;
-        width: 100%;
+        max-height: 60px;
+        max-width: 100%;
     }
 .slick-current .small-img span{
     border-color: #4cff00;
 }
-    
+
+.slider-nav .slick-arrow {
+    background-image: url(../images/control-slider2.png);
+    height: 31px;
+    margin-top: -15px;
+    width: 20px;
+}
 .slider-nav .slick-prev {
     left: 7px;
 }
@@ -286,6 +295,36 @@
     display:block;
     width: 100%;
 }
+/*================================*/
+.control-slider .slick-hidden{
+    display: none !important;
+}
+/*=======================*/
+.images-box {
+    background-color: #fff;
+    position: relative;
+    max-height: 300px;
+    overflow: hidden;
+    width: 100%;
+}
+    .images-box img {
+        max-height: 300px;
+        width: auto;
+        max-width: 100%;
+    }
+    .images-box .zoom-images {
+        background-color: #cf0;
+        cursor: zoom-in;
+        display: block;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        opacity: 0;
+	    filter:alpha(opacity=0); 
+        width: 100%;
+        z-index: 99;
+    }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
     #sliderBanner .slick-arrow, .slick-dots {

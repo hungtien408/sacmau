@@ -51,6 +51,7 @@ hr {
     z-index: 1;
 }
 #wrapper-in {
+    background: url(../images/header-bg.jpg) repeat center top;
     top: 0;
     left: 0;
     position: relative;
@@ -61,7 +62,6 @@ hr {
 /*======================================================*/
 #header
 {
-    background-color: #fff;
     left: 0;
     top: 0;
     position: relative;
@@ -74,7 +74,6 @@ hr {
 }
 #header .header-top
 {
-    background: url(../images/header-bg.jpg) repeat-x left top;
     padding: 10px 0;
 }
 .logo {
@@ -113,6 +112,8 @@ hr {
 }
 /*==========================*/
  #header.header-sroll {
+    background: url(../images/menu-bg.png) repeat left top;
+    background-color: #1c9600 ;
         -webkit-box-shadow: 0 3px 5px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
         -moz-box-shadow:    0 3px 5px #ccc;  /* Firefox 3.5 - 3.6 */
         box-shadow:         0 3px 5px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
@@ -283,6 +284,7 @@ hr {
 #header .form-search {
     float: right;
     margin-top: 10px;
+    margin-right: 10px;
     width: 250px;
 }
 /*========================menu mobile=================================================================*/
@@ -292,6 +294,7 @@ hr {
     float: left;
     font-size: 9px;
     text-transform: uppercase;
+    margin-left: 12px;
     line-height: 40px;
 }
     .menu-mo span {
@@ -795,10 +798,17 @@ body .mobilep-right {
 .product-img {
     background-color: #fff;
     border: solid 1px #1f9803;
+	border-radius: 3px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+	-moz-border-radius: 3px; /* Firefox */
+    -webkit-border-radius: 3px; /* Safari and Chrome */
     display: block;
     padding: 1px;
     width: 100%;
 }
+    .product-img .box-img {
+        background-size: contain;
+        height: 100%;
+    }
 .product-name a {
     color: #4c4c4c;
     display: block;
@@ -826,6 +836,11 @@ body .mobilep-right {
     .protb-none .product-name a:hover, .protb-none .product-box:hover .product-name a {
         color: #fef738;
     }
+.protb-none .product-img {
+	border-radius: 0; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+	-moz-border-radius: 0; /* Firefox */
+    -webkit-border-radius: 0; /* Safari and Chrome */
+}
 /*==================*/
 #site
 {
@@ -1121,6 +1136,7 @@ body .mobilep-right {
 }
 /*========================================*/
 .wrapper-text {
+    background-color: #fff;
     margin-bottom: 40px;
     text-align: justify;
     width: 100%;
@@ -1131,8 +1147,15 @@ body .mobilep-right {
     .wrapper-text img {
         max-width: 100% !important;
     }
-
+    .wrapper-text > span {
+        display: block;
+        padding: 20px;
+    }
 /*===================contact====================*/
+.wrap-contact {
+    background-color: #fff;
+    padding: 20px;
+}
 .wrap-contact, .wrap-contact a {
     color: #282828;
     font-size: 14px;
@@ -1317,9 +1340,8 @@ body .mobilep-right {
 }
 /*=========================*/
 .slider-text {
-    background-color: #f2f2f2;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     width: 100%;
     z-index: 1;
 }
@@ -1333,11 +1355,11 @@ body .mobilep-right {
 
 .icon-pro {
     top: 10px;
-    right: 0;
+    right: -20px;
     width: 120px;
     position: absolute;
     z-index: 2;
 }
 .slide .icon-pro {
-    right: 10px;
+    right: -10px;
 }

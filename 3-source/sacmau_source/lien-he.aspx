@@ -8,7 +8,9 @@
     <meta name="description" content="Liên Hệ" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="row wrap-contact">
+    <div class="wrap-contact">
+        
+    <div class="row">
         <div class="col-md-6">
             <div class="address-contact">
                 <h4 class="text-uppercase">
@@ -106,6 +108,7 @@
         </div>
     </div>
     <div id="mapshow">
+    </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphMenuMobile" runat="Server">

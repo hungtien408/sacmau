@@ -34,7 +34,6 @@
 ===================================*/
 
 .bx-wrapper .bx-viewport {
-	background: #f2f2f2;
 	left: 0;
 	
 	/*fix other elements on the page moving (on Chrome)*/

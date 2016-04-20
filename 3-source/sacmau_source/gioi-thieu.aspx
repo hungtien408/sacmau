@@ -11,7 +11,8 @@
             <ItemTemplate>
                 <h4 class="text-uppercase title mo-640">
                     <%# Eval("ArticleTitle")%></h4>
-                <asp:Label ID="Label1" runat="server" Text='<%# Eval("Content") %>'></asp:Label>
+                
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Content") %>'></asp:Label>
             </ItemTemplate>
             <LayoutTemplate>
                 <span runat="server" id="itemPlaceholder" />

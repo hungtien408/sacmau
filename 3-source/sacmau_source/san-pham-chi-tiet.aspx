@@ -18,12 +18,16 @@
                             EnableModelValidation="True">
                             <ItemTemplate>
                                 <div class="slide">
-                                    <img alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/album/" + Eval("ImageName") : "~/assets/images/details-img-1.jpg" %>'
-                                        runat="server" />
+                                    <div class="images-box box-img fullbox-img contain-img">
+                                        <img class="hideo" id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/album/" + Eval("ImageName") : "~/assets/images/details-img-1.jpg" %>'
+                                            runat="server" />
+                                        <a class="zoom-images fancybox desktop-showhide" data-fancybox-group="gallery" href='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "res/product/album/" + Eval("ImageName") : "assets/images/details-big-1.jpg" %>'>
+                                            zoom</a>
+                                    </div>
                                 </div>
                             </ItemTemplate>
                             <LayoutTemplate>
-                                <div class="detailimg-desktop">
+                                <%--<div class="detailimg-desktop">
                                     <div class="zoom-box">
                                         <a id="zoom1" href='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/album/" + Eval("ImageName") : "~/assets/images/details-big-2.jpg" %>'
                                             class="cloud-zoom" rel="showTitle: false, adjustY:0, adjustX:5">
@@ -31,11 +35,9 @@
                                                 alt="" />
                                         </a>
                                     </div>
-                                </div>
-                                <div class="detailimg-mobile">
-                                    <div class="slider-for">
-                                        <span runat="server" id="itemPlaceholder" />
-                                    </div>
+                                </div>--%>
+                                <div class="slider-for">
+                                    <span runat="server" id="itemPlaceholder" />
                                 </div>
                             </LayoutTemplate>
                         </asp:ListView>
@@ -46,12 +48,9 @@
                                 EnableModelValidation="True">
                                 <ItemTemplate>
                                     <div class="slide">
-                                        <a href='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "res/product/album/" + Eval("ImageName") : "assets/images/details-big-1.jpg" %>'
-                                            data-img='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "res/product/album/" + Eval("ImageName") : "assets/images/details-img-1.jpg" %>'
-                                            class='cloud-zoom-gallery small-img' title='Thumbnail 1' rel="useZoom: 'zoom1', smallImage: '<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "res/product/album/" + Eval("ImageName") : "assets/images/details-img-1.jpg" %>'">
-                                            <span>
-                                                <img alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/album/" + Eval("ImageName") : "~/assets/images/details-small-1.jpg" %>'
-                                                    runat="server" /></span> </a>
+                                        <a href="javascript:void(0);" class="small-img"><span class="box-img fullbox-img contain-img">
+                                            <img alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/album/" + Eval("ImageName") : "~/assets/images/details-small-1.jpg" %>'
+                                                runat="server" /></span> </a>
                                     </div>
                                 </ItemTemplate>
                                 <LayoutTemplate>
@@ -88,8 +87,8 @@
                                     <%# string.IsNullOrEmpty(Eval("OtherPrice").ToString()) ?(string.Format("{0:##,###.##}", Eval("Price")).Replace('.', '*').Replace(',', '.').Replace('*', ',')) :  Eval("OtherPrice") %><%# string.IsNullOrEmpty(Eval("Price").ToString()) ? "" : "đ"%></strong></li>
                         </ul>
                         <p style="font-size: 16px;">
-                            <strong>Liên hệ trực tiếp để có giá tốt nhất</strong><br />
-                            <strong style="color: #f00;">Hotline:</strong> <span style="color: #f00; font-size: 20px;
+                            <%--<strong>Liên hệ trực tiếp để có giá tốt nhất</strong><br />--%>
+                            <strong style="color: #f00;">Hotline:</strong> <span style="color: #f00; font-size: 16px;
                                 font-style: italic;">0907 440 881 ( A.Tấn ) - 0909 440 881 ( C.Thuận )</span></p>
                         <p>
                             Hoặc Email: <a style="color: #000; font-style: italic;" href="mailto:giaydantuongsacmau@yahoo.com.vn">
@@ -130,8 +129,11 @@
                 <ItemTemplate>
                     <div class="slide">
                         <div class="product-box">
+                            <div class="icon-pro">
+                                <img class="img-responsive" src="assets/images/logo3.png" alt="" />
+                            </div>
                             <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'
-                                class="product-img"><span class=" box-img fullbox-img cover-img">
+                                class="product-img corner"><span class=" box-img fullbox-img cover-img">
                                     <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
                                         runat="server" /></span></a>
                             <h4 class="product-name">
