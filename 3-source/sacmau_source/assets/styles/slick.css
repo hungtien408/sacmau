@@ -177,6 +177,18 @@
     margin-top: -11px;
     width: 14px;
 }
+#silderProduct .slick-arrow {
+    background-image: url(../images/control-slider4.png);
+    height: 31px;
+    margin-top: -16px;
+    width: 15px;
+}
+#silderProduct .slick-prev {
+    left: 7px;
+}
+#silderProduct .slick-next {
+    right: 7px;
+}
 /*====================*/
 .slick-dots {
     bottom: 10px;
@@ -276,7 +288,7 @@
         max-width: 100%;
     }
 .slick-current .small-img span{
-    border-color: #4cff00;
+    border-color: #333999;
 }
 
 .slider-nav .slick-arrow {

@@ -7,12 +7,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBanner" runat="Server">
     <div id="banner">
-        <div id="sliderBanner">
+        <div class="slider-wrapper">
+             <div id="slider"class="nivoSlider">
             <asp:ListView ID="lstBanner" runat="server" DataSourceID="odsBanner" EnableModelValidation="True">
                 <ItemTemplate>
-                    <div class="slide">
-                        <img alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/banner-img-1.jpg" %>'
-                            runat="server" /></div>
+                        <img class="img-responsive" alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/banner-img-1.jpg" %>'
+                            runat="server" />
                 </ItemTemplate>
                 <LayoutTemplate>
                     <span runat="server" id="itemPlaceholder" />
@@ -33,6 +33,24 @@
                     <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
                 </SelectParameters>
             </asp:ObjectDataSource>
+             </div>
+        </div>
+        
+        <div class="note-slider">
+          <div class="title-slider">
+              <img src="assets/images/title-chuyen.png" />
+          </div>
+          <div class="list-slider">
+              <ul>
+                  <li><a href="javascript:void(0);">tư vấn</a></li>
+                  <li><a href="javascript:void(0);">thiết kế</a></li>
+                  <li><a href="javascript:void(0);">thi công</a></li>
+              </ul>
+          </div>
+          <div class="detail-slider">
+              <p>Sản phẩm được<strong class="bold">bảo hành 5 năm</strong></p>
+              <p>Phục vụ tư vấn<strong class="bold">xem mẫu tận nơi</strong></p>
+          </div>
         </div>
     </div>
 </asp:Content>

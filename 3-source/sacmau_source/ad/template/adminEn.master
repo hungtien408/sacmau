@@ -122,7 +122,7 @@
                     <asp:RadMenuItem runat="server" Text="Giới Thiệu" PostBack="False" Font-Bold="True"
                         NavigateUrl="~/ad/single/about-us.aspx">
                     </asp:RadMenuItem>
-                    <asp:RadMenuItem runat="server" Text="Mẫu Thiết Kế" PostBack="False" Font-Bold="True"
+                    <asp:RadMenuItem runat="server" Text="Dự Án" PostBack="False" Font-Bold="True"
                         NavigateUrl="~/ad/single/designs.aspx">
                     </asp:RadMenuItem>
                     <asp:RadMenuItem runat="server" Text="Khuyến Mãi" PostBack="False" Font-Bold="True"

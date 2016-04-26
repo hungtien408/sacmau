@@ -73,27 +73,21 @@ function myfunload() {
                 dots: false,
                 infinite: true,
                 speed: 300,
-                slidesToShow: 4,
+                slidesToShow: 3,
                 slidesToScroll: 1,
-                prevArrow: $(".control-slider .prev"),
-                nextArrow: $(".control-slider .next"),
+                //prevArrow: $(".control-slider .prev"),
+                //nextArrow: $(".control-slider .next"),
                 responsive: [
-                  {
-                      breakpoint: 1200,
-                      settings: {
-                          slidesToShow: 4
-                      }
-                  },
-                  {
-                      breakpoint: 1199,
-                      settings: {
-                          slidesToShow: 3
-                      }
-                  },
                   {
                       breakpoint: 639,
                       settings: {
                           slidesToShow: 2
+                      }
+                  },
+                  {
+                      breakpoint: 419,
+                      settings: {
+                          slidesToShow: 1
                       }
                   }
                   // You can unslick at a given breakpoint now by adding:
@@ -181,7 +175,7 @@ function myListTb() {
         var producttb = $('.product-tb').imagesLoaded(function () {
             producttb.textHeight({
                 activetit: true,
-                listcss: [{ cssname: ".product-img" }, { cssname: ".product-name" }],
+                listcss: [{ cssname: ".product-img" }, { cssname: ".product-name" }, { cssname: ".product-code" }],
                 desbool: false,
                 listpos: [{ cssnamepos: ".description", cssheightnum: "3" }],
                 tbrow: true,
@@ -265,6 +259,6 @@ function mapfooterre() {
 function mapfooters() {
     $('.map-footer').remove();
     if ($(window).width() > 768) {
-        $('#sharemap').after('<div class="map-footer"><iframe id="iframe" src="mapfooter.aspx" frameborder="0" height="100%" width="100%"></iframe></div>');
+        $('#mapfooter').append('<div class="map-footer"><iframe id="iframe" src="mapfooter.aspx" frameborder="0" height="100%" width="100%"></iframe></div>');
     }
 }

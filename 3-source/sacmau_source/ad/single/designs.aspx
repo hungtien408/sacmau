@@ -381,7 +381,7 @@
                                             Culture="vi-VN" Language="vi-VN" InputSize="69" AllowedFileExtensions=".jpg,.jpeg,.gif,.png" />
                                         <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Sai định dạng ảnh (*.jpg, *.jpeg, *.gif, *.png)"
                                             ClientValidationFunction="validateRadUpload" Display="Dynamic"></asp:CustomValidator>
-                                        <span class="required">(Kích thước 205px x 140px)</span>
+                                        <span class="required">(Kích thước 253px x 253px)</span>
                                     </td>
                                 </tr>
                                 <tr>

@@ -40,8 +40,8 @@
     }
     #menu > li > a {
         font-size: 15px;
-        line-height: 44px;
-        padding: 0 10px;
+        line-height: 40px;
+        padding: 0 12px;
     }
     #menu li li a {
         font-size: 13px;
@@ -53,6 +53,25 @@
     #header .form-search {
         margin-top: 6px;
     }
+    #banner {
+        min-height: 275px;
+    }
+    .note-slider {
+        width: 270px;
+    }
+    .list-slider li {
+        padding: 0 11px;
+    }
+    .list-slider li a {
+        font-size: 14px;
+    }
+    .detail-slider {
+        font-size: 16px;
+        line-height: 24px;
+    }
+        .detail-slider .bold {
+            font-size: 24px;
+        }
     /*==================*/
     #colContent {
         width: 640px;
@@ -64,9 +83,32 @@
         font-size: 13px;
         line-height: 20px;
     }
+    .wrapper-menu {
+        background-color: #2e3194;
+    }
+    #header .logo {
+        width: 100%;
+    }
+    #header .form-search {
+        float: none;
+        overflow: hidden;
+        margin: 0;
+        width: auto;
+    }
+    .form-search .search-input {
+        margin: 0;
+    }
+    .form-search .search-text {
+        line-height: 40px;
+        height: 40px;
+    }
+    .wrap-footer {
+        width:420px;
+    }
 }
 @media (min-width: 993px)
 {
+    
 }
 @media (max-width: 992px)
 {
@@ -75,9 +117,6 @@
     }
     .ipadmo-992 {
         display: block;
-    }
-    #header .form-search {
-        margin-top: 4px;
     }
     .hotline {
         background-position: left bottom;
@@ -88,6 +127,9 @@
     .list-hotline {
         font-size: 20px;
         line-height: 24px;
+    }
+    #header .logo {
+        width: 100%;
     }
     /*==================*/
     #colAside, #colContent {
@@ -100,21 +142,41 @@
     }
     #footer .logo {
         margin: 0 auto;
+        padding: 0 0 20px;
     }
     .detail-images {
         width: 46%;
     }
+    .title-colaside {
+        background:none;
+        background-color:#333399;
+    }
+    .wrap-footer {
+        float:left;
+    }
+    .aside-box1 {
+        float:left;
+    }
+    .list-address {
+        border: none;
+        margin: 0 0 20px;
+        padding: 0;
+    }
 
 }
-@media (min-width: 769px)
+@media (min-width: 768px)
 {
+    #header.header-sroll .logo {
+        padding: 3px 0;
+        width: 50px;
+    }
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 992px)
 {
     
     #header .logo {
-        width: 130px;
+        width: 100%;
     }
     .sologan {
         width: 205px;
@@ -123,6 +185,36 @@
         font-size: 13px;
         line-height: 20px;
     }
+    #banner {
+        min-height: 200px;
+    }
+    .title-slider {
+        margin: 0;
+        padding: 10px;
+    }
+    .list-slider {
+        margin: 0 15px 10px;
+    }
+    .title-slider img {
+        max-width: 80%;
+    }
+    .note-slider {
+        width: 250px;
+    }
+    .list-slider li {
+        padding: 0 10px;
+        line-height: 30px;
+    }
+    .list-slider li a {
+        font-size: 13px;
+    }
+    .detail-slider {
+        font-size: 14px;
+        line-height: 20px;
+    }
+        .detail-slider .bold {
+            font-size: 20px;
+        }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px)
@@ -136,7 +228,10 @@
          display: block !important;
      }
     .wrapper-menu {
-        background: #1c9600;
+    }
+    #header.header-sroll .logo {
+        padding: 0;
+        width: 50px;
     }
     .aside-box {
         margin-bottom: 20px;
@@ -172,9 +267,59 @@
         line-height: 20px;
         padding: 10px;
     }
+    #banner {
+        min-height: 100px;
+    }
+    .slider-wrapper img{
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+    .note-slider {
+        background: #2e3194;
+        position: relative;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        -moz-border-radius: 0 0 10px 10px;
+        -webkit-border-radius: 0 0 10px 10px;
+    }
+    .title-slider {
+        text-align: left;
+        margin: 0;
+        padding: 10px;
+    }
+    .list-slider {
+        margin: 0 15px 10px;
+    }
+    .title-slider img {
+        max-width: 200px;
+    }
+    .list-slider li {
+        padding: 0 20px 0 10px;
+        line-height: 30px;
+    }
+    .list-slider li a {
+        font-size: 13px;
+    }
+    .detail-slider {
+            text-align: left;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 15px;
+    }
+        .detail-slider .bold {
+            font-size: 20px;
+        }
+    .nivo-controlNav {
+        right:0;
+    }
 }
 @media (min-width: 481px) and (max-width: 767px)
 {
+        .detail-slider p {
+            float: left;
+            width: 50%;
+        }
 }
 @media (min-width: 640px) and (max-width: 767px)
 {
@@ -189,12 +334,13 @@
 }
 @media (max-width: 639px)
 {
-    #header .logo {
-        margin: 0 auto;
-        width: 120px;
+    
+    #header.header-sroll .logo, #header .logo {
+        padding: 4px 0 0;
+        width: 40px;
     }
     .header-top {
-        padding: 6px 0;
+        padding: 3px 0;
     }
     .header-top .col-xs-6 {
         width: 100%;
@@ -203,25 +349,29 @@
         display: none;
     }
     #header .form-search, #header .form-search .search-text {
-        background-color: #1c9600;
+        background-color: #3366cc;
     }
     #header .form-search {
-        float: left;
-        margin-right: 0;
-        width: 200px;
+        margin-top: 0;
     }
     .menu-mo {
         float: right;
-        margin-right: 10px;
         margin-left: 0;
+        padding-left: 10px;
     }
     #header .form-search .search-btn {
-        background-position: left bottom;
+        background-position: center center;
         float: left;
+        height: 32px;
     }
     #header .form-search .search-text {
         color: #ededed;
         font-size: 13px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .menu-mo, .menu-mo span {
+        line-height: 32px;
     }
     #header .form-search .search-input {
         padding: 0;
@@ -289,6 +439,20 @@
     .protb-none .col-xs-6 {
         width: 100%;
     }
+    #header .form-search {
+        overflow: hidden;
+        width: auto;
+    }
+    #header .col-xs-1 {
+        display: none;
+    }
+    #header .col-xs-11 {
+        width: 100%;
+    }
+    .head-bg .title-in {
+        background:none;
+        font-size:25px;
+    }
 }
 @media (max-width: 419px)
 {
@@ -303,6 +467,13 @@
         font-size: 12px;
         line-height: 16px;
     }
+    .product-tb .col-xs-4 {
+        width: 100%;
+    }
+    .head-bg .title-in {
+        font-size:15px;
+    }
+
 }
 @media (max-width: 319px)
 {

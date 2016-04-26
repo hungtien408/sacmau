@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="site-sub.master.cs"
+    Inherits="site_sub" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBanner" runat="Server">
+    <div id="banner">
+        <div id="sliderBanner">
+            <asp:ListView ID="lstBanner" runat="server" DataSourceID="odsBanner" EnableModelValidation="True">
+                <ItemTemplate>
+                    <div class="slide">
+                        <img alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/banner-img-1.jpg" %>'
+                            runat="server" /></div>
+                </ItemTemplate>
+                <LayoutTemplate>
+                    <span runat="server" id="itemPlaceholder" />
+                </LayoutTemplate>
+            </asp:ListView>
+            <asp:ObjectDataSource ID="odsBanner" runat="server" SelectMethod="AdsBannerSelectAll"
+                TypeName="TLLib.AdsBanner">
+                <SelectParameters>
+                    <asp:Parameter Name="StartRowIndex" Type="String" />
+                    <asp:Parameter Name="EndRowIndex" Type="String" />
+                    <asp:Parameter DefaultValue="5" Name="AdsCategoryID" Type="String" />
+                    <asp:Parameter Name="CompanyName" Type="String" />
+                    <asp:Parameter Name="Website" Type="String" />
+                    <asp:Parameter Name="FromDate" Type="String" />
+                    <asp:Parameter Name="ToDate" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                    <asp:Parameter Name="Priority" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphAside" runat="Server">
+    <asp:ContentPlaceHolder ID="cphAside" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cphMenuMobile" runat="Server">
+    <asp:ContentPlaceHolder ID="cphMenuMobile" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="cphPopup" runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -6,41 +6,40 @@
     <meta name="description" content="SM" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="head head-bg">
+    <div class="wrap-content wrap-content-bg">
+        <div class="head head-bg">
         <h4 class="title-in">
             SẢN PHẨM BÁN CHẠY</h4>
-        <div data-id="silderProduct" class="control-slider">
-            <a href="javascript:void(0);" class="prev"><span class="fa fa-angle-left"></span>
-            </a><a href="javascript:void(0);" class="next"><span class="fa fa-angle-right"></span>
-            </a>
-        </div>
     </div>
-    <div class="wrap-content">
-        <div class="pro-row">
+        <div class="wrap-prolist">
             <asp:ListView ID="lstProductBanChay" runat="server" DataSourceID="odsProductBanChay"
                 EnableModelValidation="True">
                 <ItemTemplate>
                     <div class="slide">
                         <div class="product-box">
-                            <div class="icon-pro">
+                            <%--<div class="icon-pro">
                                 <img class="img-responsive" src="assets/images/logo3.png" alt="" />
-                            </div>
-                            <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'
-                                class="product-img corner"><span class=" box-img fullbox-img cover-img">
-                                    <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
-                                        runat="server" /></span></a>
-                            <h4 class="product-name">
-                                <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
-                                    <%# Eval("ProductName") %></a></h4>
-                            <div class="product-code">
+                            </div>--%>
+                            <div class="product-img">
+                                <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'
+                                    class=" corner"><span class=" box-img fullbox-img cover-img">
+                                        <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
+                                            runat="server" /></span>
+                                    <div class="product-name product-name-slide">
+                                    <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
+                                        <%# Eval("ProductName") %></a></div>
+                                </a>
+                             </div>
+                            <%--<div class="product-code">
                                 Mã số :
-                                <%# Eval("Tag") %></div>
+                                <%# Eval("Tag") %></div>--%>
                         </div>
                     </div>
                 </ItemTemplate>
                 <LayoutTemplate>
                     <div id="silderProduct" class="list-pro">
                         <span runat="server" id="itemPlaceholder" />
+
                     </div>
                 </LayoutTemplate>
             </asp:ListView>
@@ -71,17 +70,32 @@
                     <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
                 </SelectParameters>
             </asp:ObjectDataSource>
+            <%--<div data-id="silderProduct" class="control-slider">
+                <a href="javascript:void(0);" class="prev"><span class="fa fa-caret-left"></span>
+                </a><a href="javascript:void(0);" class="next"><span class="fa fa-caret-right"></span>
+                </a>
+            </div>--%>
         </div>
     </div>
-    <h4 class="text-uppercase title">
-        SẢN PHẨM MỚI</h4>
+    <div class="title">
+        <h4><strong>S</strong>ản phẩm mới</h4>
+        <div class="pager desktop-showhide">
+            <a href="#" class="prev fa fa-backward"></a>
+            <a href="#" class="prev fa fa-caret-left"></a>
+            <a href="#" class="current">1</a> 
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next fa fa-caret-right"></a>
+            <a href="#" class="next fa fa-forward"></a>
+        </div>
+    </div>
     <asp:ListView ID="lstProductNew" runat="server" DataSourceID="odsProductNew" EnableModelValidation="True">
         <ItemTemplate>
             <div class="col-lg-3 col-xs-4 element-item">
                 <div class="product-box">
-                    <div class="icon-pro">
+                    <%--<div class="icon-pro">
                         <img class="img-responsive" src="assets/images/logo3.png" alt="" />
-                    </div>
+                    </div>--%>
                     <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'
                         class="product-img corner"><span class=" box-img fullbox-img cover-img">
                             <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
@@ -128,6 +142,16 @@
             <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
         </SelectParameters>
     </asp:ObjectDataSource>
+    
+        <div class="pager text-center mobile-showhide">
+            <a href="#" class="prev fa fa-backward"></a>
+            <a href="#" class="prev fa fa-caret-left"></a>
+            <a href="#" class="current">1</a> 
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next fa fa-caret-right"></a>
+            <a href="#" class="next fa fa-forward"></a>
+        </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphAside" runat="Server">
 </asp:Content>

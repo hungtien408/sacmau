@@ -8,17 +8,17 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField ID="hdnSanPham" runat="server" />
     <a class="a-link-sp" href="<%= hdnSanPham.Value %>"></a>
-    <h4 class="text-uppercase title">
-        <asp:Label ID="lblTitle" runat="server"></asp:Label></h4>
+    <div class="title">
+        <h4><asp:Label ID="lblTitle" runat="server"></asp:Label></h4></div>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <asp:ListView ID="lstProduct" runat="server" DataSourceID="odsProduct" EnableModelValidation="True">
                 <ItemTemplate>
                     <div class="col-lg-3 col-xs-4 element-item">
                         <div class="product-box">
-                            <div class="icon-pro">
+                            <%--<div class="icon-pro">
                                 <img class="img-responsive" src="assets/images/logo3.png" alt="" />
-                            </div>
+                            </div>--%>
                             <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'
                                 class="product-img corner"><span class=" box-img fullbox-img cover-img">
                                     <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'

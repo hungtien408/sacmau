@@ -7,7 +7,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h4 class="text-uppercase title">
-        khuến mãi</h4>
+        khuyến mãi</h4>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <asp:ListView ID="lstPromotion" runat="server" DataSourceID="odsPromotion" EnableModelValidation="True">

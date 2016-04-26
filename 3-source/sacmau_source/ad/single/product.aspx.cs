@@ -269,7 +269,7 @@ public partial class ad_single_product : System.Web.UI.Page
                     //ResizeCropImage.CreateThumbNailByCondition("~/res/product/", "~/res/product/thumbs/", ImageName, 120, 120);
                     string bgColor = "#ffffff";
                     ResizeCropImage.CreateThumbNailWithBackGroundColor("~/res/product/", "~/res/product/thumbs/", ImageName, 120, 120, bgColor);
-                    ResizeCropImage.ResizeWithBackGroundColor(strFullPath, 205, 140, bgColor);
+                    ResizeCropImage.ResizeWithBackGroundColor(strFullPath, 253, 253, bgColor);
                 }
 
                 if (TempImage.Rows.Count > 0)
@@ -320,7 +320,7 @@ public partial class ad_single_product : System.Web.UI.Page
                     //ResizeCropImage.CreateThumbNailByCondition("~/res/product/", "~/res/product/thumbs/", ImageName, 120, 120);
                     string bgColor = "#ffffff";
                     ResizeCropImage.CreateThumbNailWithBackGroundColor("~/res/product/", "~/res/product/thumbs/", ImageName, 120, 120, bgColor);
-                    ResizeCropImage.ResizeWithBackGroundColor(strFullPath, 205, 140, bgColor);
+                    ResizeCropImage.ResizeWithBackGroundColor(strFullPath, 253, 253, bgColor);
                 }
             }
         }
