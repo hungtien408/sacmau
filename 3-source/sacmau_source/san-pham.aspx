@@ -32,6 +32,9 @@
                         </div>
                     </div>
                 </ItemTemplate>
+                <EmptyDataTemplate>
+                    <span>Ðang cập nhật.</span>
+                </EmptyDataTemplate>
                 <LayoutTemplate>
                     <div class="row product-tb">
                         <span runat="server" id="itemPlaceholder" />
