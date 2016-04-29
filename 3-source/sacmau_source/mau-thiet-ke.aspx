@@ -12,23 +12,23 @@
         <ContentTemplate>
             <asp:ListView ID="lstPromotion" runat="server" DataSourceID="odsPromotion" EnableModelValidation="True">
                 <ItemTemplate>
-                    <div class="col-xs-6 element-item">
                         <div class="product-box">
                             <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tk-" + Eval("ArticleID") + ".aspx" %>'
                                 class="product-img box-img fullbox-img cover-img">
                                 <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
                                     runat="server" /></a>
-                            <h4 class="product-name">
-                                <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tk-" + Eval("ArticleID") + ".aspx" %>'
-                                    class="text-center">
+                            <div class="product-detail">
+                                <h4 class="product-name"><a href='<%# progressTitle(Eval("ArticleTitle")) + "-tk-" + Eval("ArticleID") + ".aspx" %>'>
                                     <%# Eval("ArticleTitle")%></a></h4>
+                                <div class="description"><%# Eval("Description")%></div>
+                            </div>
                         </div>
-                    </div>
                 </ItemTemplate>
                 <LayoutTemplate>
-                    <div class="row product-tb protb-none">
+                    <div class="row product-tb1">
                         <span runat="server" id="itemPlaceholder" />
                     </div>
+                    <div class="clearfix"></div>
                 </LayoutTemplate>
             </asp:ListView>
             <asp:ObjectDataSource ID="odsPromotion" runat="server" SelectMethod="ArticleSelectAll"

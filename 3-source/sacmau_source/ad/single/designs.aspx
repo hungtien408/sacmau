@@ -459,7 +459,7 @@
                                             Width="500px"></asp:TextBox>
                                     </td>
                                 </tr>
-                                <tr class="invisible">
+                                <tr>
                                     <td class="left" valign="top">
                                         Mô tả
                                     </td>

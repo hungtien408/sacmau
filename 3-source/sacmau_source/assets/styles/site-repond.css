@@ -453,6 +453,12 @@
         background:none;
         font-size:25px;
     }
+    .product-tb1 .product-img {
+        width:100%;
+     }
+    .product-tb1 .product-detail {
+        padding:10px;
+    }
 }
 @media (max-width: 419px)
 {
