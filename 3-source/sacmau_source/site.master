@@ -299,7 +299,8 @@
                         <div class="row aside-row">
                             <div class="col-md-12 col-sm-5 col-xs-6">
                                 <h4 class="text-uppercase title title-colaside">
-                                    XEM KHUYẾN MÃI</h4>
+                                    XEM QUẢNG CÁO <span style="    font-size: 10px;
+    text-transform: lowercase;">(click vào)</span></h4>
                                 <div class="adv-box">
                                     <div id="sliderAds">
                                         <asp:ListView ID="lstQuangCao" runat="server" DataSourceID="odsQuangCao" EnableModelValidation="True">

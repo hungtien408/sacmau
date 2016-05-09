@@ -25,7 +25,7 @@
                                         runat="server" /></span></a>
                             <h4 class="product-name">
                                 <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
-                                    <%# Eval("ProductName") %></a></h4>
+                                    <%# Eval("ProductCategoryName") %></a></h4>
                             <div class="product-code">
                                 Mã số :
                                 <%# Eval("Tag") %></div>

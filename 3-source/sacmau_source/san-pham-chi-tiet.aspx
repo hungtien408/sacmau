@@ -98,16 +98,21 @@
                 <div class="clr">
                 </div>
             </div>
-            <div class="wrapper-text">
+            <%--<div class="wrapper-text">
                 <h4 class="title text-uppercase">
                     Mô tả sản phẩm</h4>
                 <asp:Label ID="Label1" runat="server" Text='<%# Eval("Content") %>'></asp:Label>
-            </div>
+            </div>--%>
         </ItemTemplate>
         <LayoutTemplate>
             <span runat="server" id="itemPlaceholder" />
         </LayoutTemplate>
     </asp:ListView>
+    <div class="wrapper-text">
+        <h4 class="title text-uppercase">
+            Mô tả sản phẩm</h4>
+        <asp:Label ID="lblContent" runat="server"></asp:Label>
+    </div>
     <asp:ObjectDataSource ID="odsProductDetails" runat="server" SelectMethod="ProductSelectOne"
         TypeName="TLLib.Product">
         <SelectParameters>
