@@ -73,9 +73,9 @@
                 </asp:ObjectDataSource>
                 <div class="details-content">
                     <h4 class="product-name">
-                        <%# Eval("ProductName") %></h4>
-                    <div class="product-code">
-                        <%# Eval("Tag") %></div>
+                        <%# Eval("ProductCategoryName") %></h4>
+                  <%--  <div class="product-code">
+                        <%# Eval("Tag") %></div>--%>
                     <div class="desription">
                         <ul class="list-info">
                             <%--<li><strong>Thương hiệu:</strong> Manufacturer</li>--%>
