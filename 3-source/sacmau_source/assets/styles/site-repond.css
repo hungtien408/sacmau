@@ -312,6 +312,7 @@
         }
     .nivo-controlNav {
         right:0;
+        visibility: hidden;
     }
 }
 @media (min-width: 481px) and (max-width: 767px)
