@@ -8,9 +8,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="wrap-content wrap-content-bg">
         <div class="head head-bg">
-        <h4 class="title-in">
-            SẢN PHẨM BÁN CHẠY</h4>
-    </div>
+            <h4 class="title-in">
+                SẢN PHẨM BÁN CHẠY</h4>
+        </div>
         <div class="wrap-prolist">
             <asp:ListView ID="lstProductBanChay" runat="server" DataSourceID="odsProductBanChay"
                 EnableModelValidation="True">
@@ -26,10 +26,10 @@
                                         <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
                                             runat="server" /></span>
                                     <div class="product-name product-name-slide">
-                                    <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
-                                        <%# Eval("ProductCategoryName") %></a></div>
+                                        <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
+                                            <%# Eval("ProductCategoryName") %></a></div>
                                 </a>
-                             </div>
+                            </div>
                             <%--<div class="product-code">
                                 Mã số :
                                 <%# Eval("Tag") %></div>--%>
@@ -39,7 +39,6 @@
                 <LayoutTemplate>
                     <div id="silderProduct" class="list-pro">
                         <span runat="server" id="itemPlaceholder" />
-
                     </div>
                 </LayoutTemplate>
             </asp:ListView>
@@ -78,15 +77,26 @@
         </div>
     </div>
     <div class="title">
-        <h4><strong>S</strong>ản phẩm mới</h4>
+        <h4>
+            <strong>S</strong>ản phẩm mới</h4>
         <div class="pager desktop-showhide">
-            <a href="#" class="prev fa fa-backward"></a>
-            <a href="#" class="prev fa fa-caret-left"></a>
-            <a href="#" class="current">1</a> 
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#" class="next fa fa-caret-right"></a>
-            <a href="#" class="next fa fa-forward"></a>
+            <asp:DataPager ID="DataPager1" runat="server" PageSize="24" PagedControlID="lstProductNew">
+                <Fields>
+                    <asp:NextPreviousPagerField ButtonType="Link" ShowFirstPageButton="true" ShowNextPageButton="false"
+                        ShowPreviousPageButton="false" ButtonCssClass="first fa fa-backward" RenderDisabledButtonsAsLabels="true"
+                        FirstPageText="" />
+                    <asp:NextPreviousPagerField ButtonType="Link" ShowFirstPageButton="false" ShowNextPageButton="false"
+                        ShowPreviousPageButton="true" ButtonCssClass="prev fa fa-caret-left" RenderDisabledButtonsAsLabels="true"
+                        PreviousPageText="" />
+                    <asp:NumericPagerField ButtonCount="5" NumericButtonCssClass="numer-paging" CurrentPageLabelCssClass="current" />
+                    <asp:NextPreviousPagerField ButtonType="Link" ShowLastPageButton="false" ButtonCssClass="next fa fa-caret-right"
+                        ShowNextPageButton="true" ShowPreviousPageButton="false" RenderDisabledButtonsAsLabels="true"
+                        NextPageText="" />
+                    <asp:NextPreviousPagerField ButtonType="Link" ShowLastPageButton="True" ButtonCssClass="last fa fa-forward"
+                        ShowNextPageButton="false" ShowPreviousPageButton="false" RenderDisabledButtonsAsLabels="true"
+                        LastPageText="" />
+                </Fields>
+            </asp:DataPager>
         </div>
     </div>
     <asp:ListView ID="lstProductNew" runat="server" DataSourceID="odsProductNew" EnableModelValidation="True">
@@ -142,16 +152,25 @@
             <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
         </SelectParameters>
     </asp:ObjectDataSource>
-    
-        <div class="pager text-center mobile-showhide">
-            <a href="#" class="prev fa fa-backward"></a>
-            <a href="#" class="prev fa fa-caret-left"></a>
-            <a href="#" class="current">1</a> 
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#" class="next fa fa-caret-right"></a>
-            <a href="#" class="next fa fa-forward"></a>
-        </div>
+    <div class="pager text-center mobile-showhide">
+        <asp:DataPager ID="DataPager2" runat="server" PageSize="24" PagedControlID="lstProductNew">
+            <Fields>
+                <asp:NextPreviousPagerField ButtonType="Link" ShowFirstPageButton="true" ShowNextPageButton="false"
+                    ShowPreviousPageButton="false" ButtonCssClass="first fa fa-backward" RenderDisabledButtonsAsLabels="true"
+                    FirstPageText="" />
+                <asp:NextPreviousPagerField ButtonType="Link" ShowFirstPageButton="false" ShowNextPageButton="false"
+                    ShowPreviousPageButton="true" ButtonCssClass="prev fa fa-caret-left" RenderDisabledButtonsAsLabels="true"
+                    PreviousPageText="" />
+                <asp:NumericPagerField ButtonCount="5" NumericButtonCssClass="numer-paging" CurrentPageLabelCssClass="current" />
+                <asp:NextPreviousPagerField ButtonType="Link" ShowLastPageButton="false" ButtonCssClass="next fa fa-caret-right"
+                    ShowNextPageButton="true" ShowPreviousPageButton="false" RenderDisabledButtonsAsLabels="true"
+                    NextPageText="" />
+                <asp:NextPreviousPagerField ButtonType="Link" ShowLastPageButton="True" ButtonCssClass="last fa fa-forward"
+                    ShowNextPageButton="false" ShowPreviousPageButton="false" RenderDisabledButtonsAsLabels="true"
+                    LastPageText="" />
+            </Fields>
+        </asp:DataPager>
+    </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphAside" runat="Server">
 </asp:Content>

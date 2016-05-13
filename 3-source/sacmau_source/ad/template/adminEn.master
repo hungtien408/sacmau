@@ -125,6 +125,9 @@
                     <asp:RadMenuItem runat="server" Text="Dự Án" PostBack="False" Font-Bold="True"
                         NavigateUrl="~/ad/single/designs.aspx">
                     </asp:RadMenuItem>
+                    <asp:RadMenuItem runat="server" Text="Mẹo Vặt" PostBack="False" Font-Bold="True"
+                        NavigateUrl="~/ad/single/tips.aspx">
+                    </asp:RadMenuItem>
                     <asp:RadMenuItem runat="server" Text="Khuyến Mãi" PostBack="False" Font-Bold="True"
                         NavigateUrl="~/ad/single/promotion.aspx">
                     </asp:RadMenuItem>

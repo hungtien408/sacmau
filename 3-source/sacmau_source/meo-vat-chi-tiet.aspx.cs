@@ -15,10 +15,10 @@ public partial class gioi_thieu : System.Web.UI.Page
         if (!IsPostBack)
         {
             string strTitle, strDescription, strMetaTitle, strMetaDescription;
-            if (!string.IsNullOrEmpty(Request.QueryString["tk"]))
+            if (!string.IsNullOrEmpty(Request.QueryString["mv"]))
             {
                 var oArticle = new Article();
-                var dv = oArticle.ArticleSelectOne(Request.QueryString["tk"]).DefaultView;
+                var dv = oArticle.ArticleSelectOne(Request.QueryString["mv"]).DefaultView;
 
                 if (dv != null && dv.Count <= 0) return;
                 var row = dv[0];
@@ -32,7 +32,7 @@ public partial class gioi_thieu : System.Web.UI.Page
             }
             else
             {
-                strTitle = strMetaTitle = "Dự án";
+                strTitle = strMetaTitle = "Mẹo vặt";
                 strDescription = "";
                 strMetaDescription = "";
             }

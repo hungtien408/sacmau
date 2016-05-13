@@ -74,51 +74,72 @@
         <div id="wrapper-in">
             <!--header-->
             <div id="header">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3 col-xs-2">
-                                <div class="logo">
-                                    <a id="A1" href="~/" runat="server">
-                                        <img class="img-responsive" src="assets/images/logo.png" alt="logo" /></a>
-                                </div>
-                                <%--<div class="sologan desktop-showhide">
-                                    <img class="img-responsive" src="assets/images/sologan.png" alt="" /></div>--%>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-xs-2">
+                            <div class="logo">
+                                <a id="A1" href="~/" runat="server">
+                                    <img class="img-responsive" src="assets/images/logo.png" alt="logo" /></a>
                             </div>
-                            <div class="col-lg-9 col-xs-10">
+                            <%--<div class="sologan desktop-showhide">
+                                    <img class="img-responsive" src="assets/images/sologan.png" alt="" /></div>--%>
+                        </div>
+                        <div class="col-lg-9 col-xs-10">
                             <div class="header-top">
-                            <div class="hotline-w">
-                                <div class="hotline">
-                                    <p>Hotline :</p>
-                                    <%--<ul class="list-hotline">
+                                <div class="hotline-w">
+                                    <div class="hotline">
+                                        <p>
+                                            Hotline :</p>
+                                        <%--<ul class="list-hotline">
                                         <li><strong>0907 440 881 (A. Tấn)</strong></li>
                                         <li><strong>0909 440 881 (C. Thuận)</strong></li>
                                     </ul>--%>
-                                    <span><strong>0907 440 881</strong>(Mr. Tấn)</span>
-                                    <span><strong>0909 440 881</strong>(Ms. Thuận)</span>
+                                        <span><strong>0907 440 881</strong>(Mr. Tấn)</span> <span><strong>0909 440 881</strong>(Ms.
+                                            Thuận)</span>
+                                        <p class="addHead">
+                                            702 Tên lửa, P. Bình Trị Đông B, Q.Bình Tân, Tp.HCM</p>
+                                    </div>
                                 </div>
-                            </div>
-                          <div class="wrapper-menu">
-                        <a class="panel-a menu-mo ipadmo-992" href="#menumobile" data-position="true" data-type="false">
-                            <span class="fa fa-reorder"></span>Menu</a>
-                        <ul id="menu" class="desktop-992">
-                            <li><a id="A4" href="~/" runat="server">Trang chủ</a></li>
-                            <li><a href="gioi-thieu.aspx">Giới thiệu</a></li>
-                            <li><a href="san-pham.aspx">Sản Phẩm</a>
-                                <asp:ListView ID="lstMenuProduct" runat="server" DataSourceID="odsMenuProduct" EnableModelValidation="True">
-                                    <ItemTemplate>
-                                        <li><a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
-                                            <%# Eval("ProductCategoryName")%></a>
-                                            <asp:HiddenField ID="hdnParent" runat="server" Value='<%# Eval("ProductCategoryID") %>' />
-                                            <asp:ListView ID="lstMenuProductSub" runat="server" DataSourceID="odsMenuProductSub"
-                                                EnableModelValidation="True">
+                                <div class="wrapper-menu">
+                                    <a class="panel-a menu-mo ipadmo-992" href="#menumobile" data-position="true" data-type="false">
+                                        <span class="fa fa-reorder"></span>Menu</a>
+                                    <ul id="menu" class="desktop-992">
+                                        <li><a id="A4" href="~/" runat="server">Trang chủ</a></li>
+                                        <li><a href="gioi-thieu.aspx">Giới thiệu</a></li>
+                                        <li><a href="san-pham.aspx">Sản Phẩm</a>
+                                            <asp:ListView ID="lstMenuProduct" runat="server" DataSourceID="odsMenuProduct" EnableModelValidation="True">
                                                 <ItemTemplate>
                                                     <li><a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
                                                         <%# Eval("ProductCategoryName")%></a>
-                                                        <asp:HiddenField ID="hdnParentSub" runat="server" Value='<%# Eval("ProductCategoryID") %>' />
-                                                        <asp:ListView ID="lstMenuSub" runat="server" DataSourceID="odsMenuSub" EnableModelValidation="True">
+                                                        <asp:HiddenField ID="hdnParent" runat="server" Value='<%# Eval("ProductCategoryID") %>' />
+                                                        <asp:ListView ID="lstMenuProductSub" runat="server" DataSourceID="odsMenuProductSub"
+                                                            EnableModelValidation="True">
                                                             <ItemTemplate>
                                                                 <li><a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
-                                                                    <%# Eval("ProductCategoryName")%></a></li>
+                                                                    <%# Eval("ProductCategoryName")%></a>
+                                                                    <asp:HiddenField ID="hdnParentSub" runat="server" Value='<%# Eval("ProductCategoryID") %>' />
+                                                                    <asp:ListView ID="lstMenuSub" runat="server" DataSourceID="odsMenuSub" EnableModelValidation="True">
+                                                                        <ItemTemplate>
+                                                                            <li><a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
+                                                                                <%# Eval("ProductCategoryName")%></a></li>
+                                                                        </ItemTemplate>
+                                                                        <LayoutTemplate>
+                                                                            <ul>
+                                                                                <li runat="server" id="itemPlaceholder"></li>
+                                                                            </ul>
+                                                                        </LayoutTemplate>
+                                                                    </asp:ListView>
+                                                                    <asp:ObjectDataSource ID="odsMenuSub" runat="server" SelectMethod="ProductCategorySelectAll"
+                                                                        TypeName="TLLib.ProductCategory">
+                                                                        <SelectParameters>
+                                                                            <asp:ControlParameter ControlID="hdnParentSub" Name="parentID" PropertyName="Value"
+                                                                                Type="Int32" />
+                                                                            <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
+                                                                            <asp:Parameter DefaultValue="True" Name="IsShowOnMenu" Type="String" />
+                                                                            <asp:Parameter DefaultValue="" Name="IsShowOnHomePage" Type="String" />
+                                                                        </SelectParameters>
+                                                                    </asp:ObjectDataSource>
+                                                                </li>
                                                             </ItemTemplate>
                                                             <LayoutTemplate>
                                                                 <ul>
@@ -126,10 +147,10 @@
                                                                 </ul>
                                                             </LayoutTemplate>
                                                         </asp:ListView>
-                                                        <asp:ObjectDataSource ID="odsMenuSub" runat="server" SelectMethod="ProductCategorySelectAll"
+                                                        <asp:ObjectDataSource ID="odsMenuProductSub" runat="server" SelectMethod="ProductCategorySelectAll"
                                                             TypeName="TLLib.ProductCategory">
                                                             <SelectParameters>
-                                                                <asp:ControlParameter ControlID="hdnParentSub" Name="parentID" PropertyName="Value"
+                                                                <asp:ControlParameter ControlID="hdnParent" Name="parentID" PropertyName="Value"
                                                                     Type="Int32" />
                                                                 <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
                                                                 <asp:Parameter DefaultValue="True" Name="IsShowOnMenu" Type="String" />
@@ -144,56 +165,38 @@
                                                     </ul>
                                                 </LayoutTemplate>
                                             </asp:ListView>
-                                            <asp:ObjectDataSource ID="odsMenuProductSub" runat="server" SelectMethod="ProductCategorySelectAll"
+                                            <asp:ObjectDataSource ID="odsMenuProduct" runat="server" SelectMethod="ProductCategorySelectAll"
                                                 TypeName="TLLib.ProductCategory">
                                                 <SelectParameters>
-                                                    <asp:ControlParameter ControlID="hdnParent" Name="parentID" PropertyName="Value"
-                                                        Type="Int32" />
+                                                    <asp:Parameter DefaultValue="0" Name="parentID" Type="Int32" />
                                                     <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
                                                     <asp:Parameter DefaultValue="True" Name="IsShowOnMenu" Type="String" />
                                                     <asp:Parameter DefaultValue="" Name="IsShowOnHomePage" Type="String" />
                                                 </SelectParameters>
                                             </asp:ObjectDataSource>
                                         </li>
-                                    </ItemTemplate>
-                                    <LayoutTemplate>
-                                        <ul>
-                                            <li runat="server" id="itemPlaceholder"></li>
-                                        </ul>
-                                    </LayoutTemplate>
-                                </asp:ListView>
-                                <asp:ObjectDataSource ID="odsMenuProduct" runat="server" SelectMethod="ProductCategorySelectAll"
-                                    TypeName="TLLib.ProductCategory">
-                                    <SelectParameters>
-                                        <asp:Parameter DefaultValue="0" Name="parentID" Type="Int32" />
-                                        <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
-                                        <asp:Parameter DefaultValue="True" Name="IsShowOnMenu" Type="String" />
-                                        <asp:Parameter DefaultValue="" Name="IsShowOnHomePage" Type="String" />
-                                    </SelectParameters>
-                                </asp:ObjectDataSource>
-                            </li>
-                            <li><a href="mau-thiet-ke.aspx">Dự án</a></li>
-                            <li><a href="khuyen-mai.aspx">Khuyến mãi</a></li>
-                            <li><a href="lien-he.aspx">Liên Hệ</a></li>
-                        </ul>
-                        <div class="form-search corner">
-                            <asp:Button ID="btnSearch" CssClass="search-btn" runat="server" OnClick="btnSearch_Click" />
-                            <div class="search-input">
-                                <asp:TextBox ID="txtSearch" CssClass="search-text" runat="server"></asp:TextBox>
-                                <asp:TextBoxWatermarkExtender ID="txtFullName_WatermarkExtender" runat="server" Enabled="True"
-                                    WatermarkText="Search" TargetControlID="txtSearch">
-                                </asp:TextBoxWatermarkExtender>
+                                        <li><a href="mau-thiet-ke.aspx">Dự án</a></li>
+                                        <li><a href="meo-vat.aspx">Mẹo vặt</a></li>
+                                        <li><a href="khuyen-mai.aspx">Khuyến mãi</a></li>
+                                        <li><a href="lien-he.aspx">Liên Hệ</a></li>
+                                    </ul>
+                                    <div class="form-search corner">
+                                        <asp:Button ID="btnSearch" CssClass="search-btn" runat="server" OnClick="btnSearch_Click" />
+                                        <div class="search-input">
+                                            <asp:TextBox ID="txtSearch" CssClass="search-text" runat="server"></asp:TextBox>
+                                            <asp:TextBoxWatermarkExtender ID="txtFullName_WatermarkExtender" runat="server" Enabled="True"
+                                                WatermarkText="Search" TargetControlID="txtSearch">
+                                            </asp:TextBoxWatermarkExtender>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                              <div class="clearfix"></div>
                     </div>
-                  </div>
                 </div>
             </div>
-        
-            
-            </div>
-                </div>
             <!--end header-->
             <hr />
             <!--main-->
@@ -299,8 +302,7 @@
                         <div class="row aside-row">
                             <div class="col-md-12 col-sm-5 col-xs-6">
                                 <h4 class="text-uppercase title title-colaside">
-                                    XEM QUẢNG CÁO <span style="    font-size: 10px;
-    text-transform: lowercase;">(click vào)</span></h4>
+                                    XEM QUẢNG CÁO <span style="font-size: 10px; text-transform: lowercase;">(click vào)</span></h4>
                                 <div class="adv-box">
                                     <div id="sliderAds">
                                         <asp:ListView ID="lstQuangCao" runat="server" DataSourceID="odsQuangCao" EnableModelValidation="True">
@@ -364,7 +366,7 @@
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6">
-                           <%-- <h4>
+                            <%-- <h4>
                                 TRANH - GIẤY DÁN TƯỜNG <span>SẮC MÀU</span></h4>--%>
                             <ul class="list-address">
                                 <li><span class="glyphicon glyphicon-map-marker"></span>702 Tên lửa, P. Bình Trị Đông
@@ -375,11 +377,10 @@
                                     giaydantuongsacmau@yahoo.com.vn</a></li>
                                 <li><span class="glyphicon glyphicon-globe"></span><a href="mailto:giaydantuongsacmau.com">
                                     giaydantuongsacmau.com</a></li>
-                                <li class="last">Follow us on: 
-                                    <a href="https://www.facebook.com/giaydantuongsacmau/"><img src="assets/images/icon1.png" /></a>
-                                    <a href="#"><img src="assets/images/icon2.png" /></a>
-                                    <a href="#"><img src="assets/images/icon3.png" /></a>
-                                </li>
+                                <li class="last">Follow us on: <a href="https://www.facebook.com/giaydantuongsacmau/">
+                                    <img src="assets/images/icon1.png" /></a> <a href="#">
+                                        <img src="assets/images/icon2.png" /></a> <a href="#">
+                                            <img src="assets/images/icon3.png" /></a> </li>
                             </ul>
                         </div>
                         <div class="col-md-5 col-sm-6">
@@ -393,25 +394,25 @@
                             </div>
                         </div>
                     </div>
-                    </div>
                 </div>
+            </div>
             <div id="footer2">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="copyright">
-                        &copy; 2016 <a href="#">giaydantuongsacmau.com</a> - All rights reserved. <a href="http://www.tranlegroup.com"
-                            target="_blank">Designed by</a> <a href="http://www.tranlegroup.com" target="_blank">
-                                Tran Le</a></div>
+                                &copy; 2016 <a href="#">giaydantuongsacmau.com</a> - All rights reserved. <a href="http://www.tranlegroup.com"
+                                    target="_blank">Designed by</a> <a href="http://www.tranlegroup.com" target="_blank">
+                                        Tran Le</a></div>
                         </div>
                         <div class="col-md-6">
-                             <div class="aside-box1">
+                            <div class="aside-box1">
                                 <ul>
-                                    <li>Đang online :
-                                        <span><%=Application["visitors_online"].ToString()%></span></li>
+                                    <li>Đang online : <span>
+                                        <%=Application["visitors_online"].ToString()%></span></li>
                                     <li>|</li>
-                                    <li>Tổng lượt truy câp :
-                                        <strong><%=Application["TatCa"].ToString()%></strong></li>
+                                    <li>Tổng lượt truy câp : <strong>
+                                        <%=Application["TatCa"].ToString()%></strong></li>
                                 </ul>
                             </div>
                         </div>
@@ -469,13 +470,13 @@
     <script src="assets/js/jquery.menu.level.js"></script>
     <script src="assets/js/jquery.fancybox.pack.js"></script>
     <script src="assets/js/jquery.main.js"></script>
-          <script type="text/javascript">
-              $(window).load(function () {
-                  $('#slider').nivoSlider({
-                      pauseOnHover: false
-                  });
-              });
-          </script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                pauseOnHover: false
+            });
+        });
+    </script>
     </form>
 </body>
 </html>

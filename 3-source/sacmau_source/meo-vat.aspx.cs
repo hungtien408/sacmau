@@ -8,17 +8,22 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using TLLib;
 
-public partial class gioi_thieu : System.Web.UI.Page
+public partial class san_pham : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
+            if (((DataView)odsPromotion.Select()).Count <= DataPager1.PageSize)
+            {
+                DataPager1.Visible = false;
+            }
+
             string strTitle, strDescription, strMetaTitle, strMetaDescription;
-            if (!string.IsNullOrEmpty(Request.QueryString["tk"]))
+            if (!string.IsNullOrEmpty(Request.QueryString["mv"]))
             {
                 var oArticle = new Article();
-                var dv = oArticle.ArticleSelectOne(Request.QueryString["tk"]).DefaultView;
+                var dv = oArticle.ArticleSelectOne(Request.QueryString["mv"]).DefaultView;
 
                 if (dv != null && dv.Count <= 0) return;
                 var row = dv[0];
@@ -32,7 +37,7 @@ public partial class gioi_thieu : System.Web.UI.Page
             }
             else
             {
-                strTitle = strMetaTitle = "Dự án";
+                strTitle = strMetaTitle = "Mẹo vặt";
                 strDescription = "";
                 strMetaDescription = "";
             }
@@ -44,5 +49,9 @@ public partial class gioi_thieu : System.Web.UI.Page
             //lblSanPham1.Text = strTitle;
             //lblSanPham2.Text = strTitle;
         }
+    }
+    protected string progressTitle(object input)
+    {
+        return Common.ConvertTitle(input.ToString());
     }
 }

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site-product.master" AutoEventWireup="true"
-    CodeFile="mau-thiet-ke-chi-tiet.aspx.cs" Inherits="gioi_thieu" %>
+    CodeFile="meo-vat-chi-tiet.aspx.cs" Inherits="gioi_thieu" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <%--<title>SM</title>
@@ -22,7 +22,7 @@
     <asp:ObjectDataSource ID="odsMauThietKeDetails" runat="server" SelectMethod="ArticleSelectOne"
         TypeName="TLLib.Article">
         <SelectParameters>
-            <asp:QueryStringParameter Name="ArticleID" QueryStringField="tk" Type="String" />
+            <asp:QueryStringParameter Name="ArticleID" QueryStringField="mv" Type="String" />
         </SelectParameters>
     </asp:ObjectDataSource>
 </asp:Content>

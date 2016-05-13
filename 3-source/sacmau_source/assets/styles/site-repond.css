@@ -29,7 +29,7 @@
         width: 320px;
     }
     .hotline {
-        background-position: left bottom;
+        background-position: left 6px;
         font-size: 16px;
         line-height: 22px;
         margin-top: 0;
@@ -119,7 +119,7 @@
         display: block;
     }
     .hotline {
-        background-position: left bottom;
+        background-position: left 6px;
         font-size: 12px;
         line-height: 18px;
         margin-top: 0;

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ad/template/adminEn.master" AutoEventWireup="true"
-    CodeFile="designs.aspx.cs" Inherits="ad_single_article" %>
+    CodeFile="tips.aspx.cs" Inherits="ad_single_article" %>
 
 <%@ Register TagPrefix="asp" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="Server">
@@ -93,7 +93,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="Server">
     <h3 class="mainTitle">
         <img alt="" src="../assets/images/product.png" class="vam" />
-        Dự Án
+        Mẹo Vặt
     </h3>
     <asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback">
         <asp:Panel ID="pnlSearch" DefaultButton="btnSearch" runat="server" Visible="False">
@@ -357,7 +357,7 @@
                     <FormTemplate>
                         <asp:Panel ID="Panel1" runat="server" DefaultButton="lnkUpdate">
                             <h3 class="searchTitle">
-                                Thông Tin Dự Án</h3>
+                                Thông Tin Mẹo Vặt</h3>
                             <asp:HiddenField ID="hdnArticleID" runat="server" Value='<%# Eval("ArticleID") %>' />
                             <asp:HiddenField ID="hdnOldImageName" runat="server" Value='<%# Eval("ImageName") %>' />
                             <div class="edit">
@@ -701,7 +701,7 @@
                 Type="String" />
             <asp:ControlParameter ControlID="txtSearchDescription" Name="Description" PropertyName="Text"
                 Type="String" />
-            <asp:ControlParameter ControlID="ddlSearchCategory" DefaultValue="2" Name="ArticleCategoryID" PropertyName="SelectedValue"
+            <asp:ControlParameter ControlID="ddlSearchCategory" DefaultValue="4" Name="ArticleCategoryID" PropertyName="SelectedValue"
                 Type="String" />
             <asp:ControlParameter ControlID="txtSearchTag" Name="Tag" PropertyName="Text" Type="String" />
             <asp:ControlParameter ControlID="ddlSearchIsShowOnHomePage" Name="IsShowOnHomePage"

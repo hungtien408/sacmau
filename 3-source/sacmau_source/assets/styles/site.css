@@ -696,6 +696,7 @@ body .mobilep-right {
         font-size: 28px;
         font-weight: 500;
         line-height: 30px;
+        color: #333399;
     }
 .head .control-slider {
     float: right;
@@ -1605,4 +1606,8 @@ body .mobilep-right {
 .product-tb1 .product-detail {
     overflow:hidden;
     padding-left:25px;
+}
+.addHead {
+    margin-top: 6px; 
+    text-align: center;
 }

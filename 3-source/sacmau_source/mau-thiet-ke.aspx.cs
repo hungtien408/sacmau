@@ -37,7 +37,7 @@ public partial class san_pham : System.Web.UI.Page
             }
             else
             {
-                strTitle = strMetaTitle = "Mẫu Thiết Kế";
+                strTitle = strMetaTitle = "Dự án";
                 strDescription = "";
                 strMetaDescription = "";
             }
