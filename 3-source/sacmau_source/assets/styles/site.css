@@ -691,12 +691,18 @@ body .mobilep-right {
     -webkit-border-radius: 30px 0 0 0;
 }
     .head-bg .title-in {
-        background:url(../images/line-sp.png) no-repeat center center;
+        /*background:url(../images/line-sp.png) no-repeat center center;*/
+        background:url(../images/line-title.png) repeat-x center center;
         text-align:center;
         font-size: 28px;
         font-weight: 500;
         line-height: 30px;
         color: #333399;
+    }
+    .title-in span {
+        background-color: #fff;
+        display: inline-block;
+        padding: 0 15px;
     }
 .head .control-slider {
     float: right;
@@ -1368,7 +1374,7 @@ body .mobilep-right {
 /*========================================*/
 .wrapper-text {
     background-color: #fff;
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
     text-align: justify;
     width: 100%;
 }

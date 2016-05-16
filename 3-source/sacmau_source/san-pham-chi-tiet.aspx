@@ -112,6 +112,7 @@
         <h4 class="title text-uppercase">
             Mô tả sản phẩm</h4>
         <asp:Label ID="lblContent" runat="server"></asp:Label>
+        <asp:Label ID="lblContent1" runat="server"></asp:Label>
     </div>
     <asp:ObjectDataSource ID="odsProductDetails" runat="server" SelectMethod="ProductSelectOne"
         TypeName="TLLib.Product">
@@ -121,7 +122,7 @@
     </asp:ObjectDataSource>
     <div class="head head-bg">
         <h4 class="text-uppercase title-in">
-            SẢN PHẨM Tương tự</h4>
+            <span>SẢN PHẨM Tương tự</span></h4>
         <div data-id="silderProduct" class="control-slider">
             <a href="javascript:void(0);" class="prev"><span class="fa fa-angle-left"></span>
             </a><a href="javascript:void(0);" class="next"><span class="fa fa-angle-right"></span>
