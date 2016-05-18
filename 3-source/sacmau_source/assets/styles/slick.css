@@ -184,10 +184,12 @@
     width: 15px;
 }
 #silderProduct .slick-prev {
-    left: 7px;
+    /*left: 7px;*/
+    left: -3px;
 }
 #silderProduct .slick-next {
-    right: 7px;
+    /*right: 7px;*/
+    right: -3px;
 }
 /*====================*/
 .slick-dots {

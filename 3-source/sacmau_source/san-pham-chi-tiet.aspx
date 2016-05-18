@@ -121,7 +121,7 @@
         </SelectParameters>
     </asp:ObjectDataSource>
     <div class="head head-bg">
-        <h4 class="text-uppercase title-in">
+        <h4 class="text-uppercase title-in title-same">
             <span>SẢN PHẨM Tương tự</span></h4>
         <div data-id="silderProduct" class="control-slider">
             <a href="javascript:void(0);" class="prev"><span class="fa fa-angle-left"></span>
@@ -144,7 +144,8 @@
                                         runat="server" /></span></a>
                             <h4 class="product-name">
                                 <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
-                                    <%# Eval("ProductName") %></a></h4>
+                                    <%--<%# Eval("ProductName") %>--%>
+                                    <%# Eval("ProductCategoryName") %></a></h4>
                             <div class="product-code">
                                 Mã số :
                                 <%# Eval("Tag") %></div>
