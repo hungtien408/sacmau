@@ -19,6 +19,12 @@ public partial class san_pham : System.Web.UI.Page
                 DataPager1.Visible = false;
             }
 
+            if (Session["PagerIndex"] != null)
+            {
+                DataPager1.SetPageProperties((int)Session["PagerIndex"],
+                  DataPager1.MaximumRows, false);
+            }
+
             string strTitle, strDescription, strMetaTitle, strMetaDescription;
             if (!string.IsNullOrEmpty(Request.QueryString["pci"]))
             {
@@ -51,5 +57,12 @@ public partial class san_pham : System.Web.UI.Page
     protected string progressTitle(object input)
     {
         return Common.ConvertTitle(input.ToString());
+    }
+    protected void DataPager1_PreRender(object sender, EventArgs e)
+    {
+        if (Page.IsPostBack)
+        {
+            Session["PagerIndex"] = DataPager1.StartRowIndex;
+        }
     }
 }
