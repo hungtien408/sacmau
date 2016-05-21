@@ -2,8 +2,8 @@
     CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <title>Sắc Màu</title>
-    <meta name="description" content="Sắc Màu" />
+    <title>Giấy Dán Tường Sắc Màu TPHCM</title>
+    <meta name="description" content="Chúng tôi chuyên cung cấp Giấy Dán Tường Hàn Quốc cao cấp, đẹp, giá rẻ, hơn 1,200 mẫu. Hãy gọi ngay để được tư vấn Giay Dan Tuong tốt nhất." />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="wrap-content wrap-content-bg">
