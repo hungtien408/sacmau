@@ -131,20 +131,20 @@
     </div>
     <div class="wrap-content">
         <div class="pro-row">
-            <asp:ListView ID="lstProductSame" runat="server" DataSourceID="odsProductSame" EnableModelValidation="True">
+            <%--<asp:ListView ID="lstProductSame" runat="server" DataSourceID="odsProductSame" EnableModelValidation="True">
                 <ItemTemplate>
                     <div class="slide">
                         <div class="product-box">
-                            <%--<div class="icon-pro">
+                            <div class="icon-pro">
                                 <img class="img-responsive" src="assets/images/logo3.png" alt="" />
-                            </div>--%>
+                            </div>
                             <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'
                                 class="product-img corner"><span class=" box-img fullbox-img cover-img">
                                     <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
                                         runat="server" /></span></a>
                             <h4 class="product-name">
                                 <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
-                                    <%--<%# Eval("ProductName") %>--%>
+                                    <%# Eval("ProductName") %>
                                     <%# Eval("ProductCategoryName") %></a></h4>
                             <div class="product-code">
                                 Mã số :
@@ -157,11 +157,40 @@
                         <span runat="server" id="itemPlaceholder" />
                     </div>
                 </LayoutTemplate>
+            </asp:ListView>--%>
+            <asp:ListView ID="lstProduct" runat="server" DataSourceID="odsProductSame" EnableModelValidation="True">
+                <ItemTemplate>
+                    <div class="col-lg-3 col-xs-4 element-item">
+                        <div class="product-box">
+                            <%--<div class="icon-pro">
+                                <img class="img-responsive" src="assets/images/logo3.png" alt="" />
+                            </div>--%>
+                            <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'
+                                class="product-img corner"><span class=" box-img fullbox-img cover-img">
+                                    <img id="Img2" class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
+                                        runat="server" /></span></a>
+                            <h4 class="product-name">
+                                <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
+                                    <%# Eval("ProductCategoryName") %></a></h4>
+                            <div class="product-code">
+                                Mã số :
+                                <%# Eval("Tag") %></div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+                <EmptyDataTemplate>
+                    <span>Ðang cập nhật.</span>
+                </EmptyDataTemplate>
+                <LayoutTemplate>
+                    <div class="row product-tb">
+                        <span runat="server" id="itemPlaceholder" />
+                    </div>
+                </LayoutTemplate>
             </asp:ListView>
             <asp:ObjectDataSource ID="odsProductSame" runat="server" SelectMethod="ProductSameSelectAll"
                 TypeName="TLLib.Product">
                 <SelectParameters>
-                    <asp:Parameter DefaultValue="10" Name="RerultCount" Type="String" />
+                    <asp:Parameter DefaultValue="12" Name="RerultCount" Type="String" />
                     <asp:QueryStringParameter DefaultValue="" Name="ProductID" QueryStringField="pi"
                         Type="String" />
                 </SelectParameters>

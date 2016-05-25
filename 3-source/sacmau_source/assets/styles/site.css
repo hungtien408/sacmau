@@ -700,7 +700,7 @@ body .mobilep-right {
     }
     .title-same
     {
-        background:url(../images/line-title.png) repeat-x center center;
+        background:url(../images/line-title.png) repeat-x center center !important;
     }
     .title-in span {
         background-color: #fff;
