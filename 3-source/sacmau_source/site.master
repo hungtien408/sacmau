@@ -176,7 +176,7 @@
                                             </asp:ObjectDataSource>
                                         </li>
                                         <li><a href="mau-thiet-ke.aspx">Dự án</a></li>
-                                        <li><a href="meo-vat.aspx">Mẹo vặt</a></li>
+                                        <li><a href="meo-vat.aspx">Hướng dẫn</a></li>
                                         <li><a href="khuyen-mai.aspx">Khuyến mãi</a></li>
                                         <li><a href="lien-he.aspx">Liên Hệ</a></li>
                                     </ul>
@@ -377,6 +377,7 @@
                                     giaydantuongsacmau@yahoo.com.vn</a></li>
                                 <li><span class="glyphicon glyphicon-globe"></span><a href="mailto:giaydantuongsacmau.com">
                                     giaydantuongsacmau.com</a></li>
+                                <li><span class="fa fa-sticky-note-o"></span>Giấy ĐKKD: 41W8043226 – MST: 0313798494</li>
                                 <li class="last">Follow us on: <a href="https://www.facebook.com/giaydantuongsacmau/">
                                     <img src="assets/images/icon1.png" /></a> <a href="#">
                                         <img src="assets/images/icon2.png" /></a> <a href="#">

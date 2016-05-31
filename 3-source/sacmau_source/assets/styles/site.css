@@ -1174,7 +1174,7 @@ body .mobilep-right {
         margin-bottom: 5px;
         font-size:13px;
     }
-    .list-address .glyphicon {
+    .list-address .glyphicon,  .list-address .fa{
         display: block;
         font-size: 13px;
         left: 0;
