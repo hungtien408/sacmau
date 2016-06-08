@@ -10,8 +10,8 @@
     <a class="a-link-sp" href="<%= hdnSanPham.Value %>"></a>
     <div class="title">
         <h4><asp:Label ID="lblTitle" runat="server"></asp:Label></h4></div>
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
+    <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>--%>
             <asp:ListView ID="lstProduct" runat="server" DataSourceID="odsProduct" EnableModelValidation="True">
                 <ItemTemplate>
                     <div class="col-lg-3 col-xs-4 element-item">
@@ -88,8 +88,8 @@
                     </Fields>
                 </asp:DataPager>
             </div>
-        </ContentTemplate>
-    </asp:UpdatePanel>
+        <%--</ContentTemplate>
+    </asp:UpdatePanel>--%>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphPopup" runat="Server">
 </asp:Content>
