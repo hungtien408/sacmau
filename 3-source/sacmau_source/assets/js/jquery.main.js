@@ -38,6 +38,7 @@ function myfunload() {
         infinite: true,
         speed: 500,
         fade: true,
+        arrows: false,
         cssEase: 'linear'
     });
     $('#sliderAds').slick({
@@ -63,6 +64,7 @@ function myfunload() {
             }
         }
     });
+   
     if ($('#silderProduct').size() == 1) {
         var silderProduct = $('#silderProduct').imagesLoaded(function () {
 

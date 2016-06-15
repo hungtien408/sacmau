@@ -8,7 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBanner" runat="Server">
     <div id="banner">
         <div class="slider-wrapper">
-             <div id="slider"class="nivoSlider">
+             <div id="sliderBanner"class="Slider">
             <asp:ListView ID="lstBanner" runat="server" DataSourceID="odsBanner" EnableModelValidation="True">
                 <ItemTemplate>
                         <img class="img-responsive" alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/banner-img-1.jpg" %>'
