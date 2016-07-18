@@ -88,11 +88,11 @@
 					</div>
 					<div class="right pull-right">
 						<div class="right-img">
-						    <a href="javasript:void(0);"><img src="assets/images/gdt.png" alt=""/></a></div>
-						<p><a href="javasript:void(0);">Sàn gỗ cao cấp</a></p>
+						    <a href="http://www.tourphongnhakebang.com/"><img src="assets/images/gdt.png" alt=""/></a></div>
+						<p><a href="http://www.tourphongnhakebang.com/">Sàn gỗ cao cấp</a></p>
 						<div class="km-right dl-hidden">
 							<p>khuyến mãi khủng</p>
-							<span><a href="javasript:void(0);">xem ngay</a></span>
+							<span><a href="http://www.tourphongnhakebang.com/">xem ngay</a></span>
 						</div>
 					</div>
 					<div class="intro-copyright">
