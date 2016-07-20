@@ -1562,6 +1562,8 @@ body .mobilep-right {
     color: #1c9600;
     font-weight: 400;
     margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 24px;
 }
 #map .box p
 {

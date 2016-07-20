@@ -40,7 +40,7 @@ window.onload = function () {
 
         // Creating the content  
         var content = '<div class="box">' +
-            '<h4>TRANH - GIẤY DÁN TƯỜNG SẮC MÀU</h4>' +
+            '<h4>GIẤY DÁN TƯỜNG - SÀN GỖ CAO CẤP SẮC MÀU</h4>' +
             '<p><span class="fa fa-map-marker"></span>702 Tên lửa, P. Bình Trị Đông B, Q.Bình Tân, Tp.HCM</p>' +            '<p><span class="fa fa-phone"></span>0907 440 881 ( A.Tấn ) - 0909 440 881 ( C.Thuận )</p>' +            '<p><span class="fa fa-envelope"></span><a href="mailto:giaydantuongsacmau@yahoo.com.vn">giaydantuongsacmau@yahoo.com.vn</a></p>' +
         '</div>';
 
