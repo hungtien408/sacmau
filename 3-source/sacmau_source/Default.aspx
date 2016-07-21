@@ -15,7 +15,7 @@
             <asp:ListView ID="lstProductBanChay" runat="server" DataSourceID="odsProductBanChay"
                 EnableModelValidation="True">
                 <ItemTemplate>
-                    <div class="slide">
+                    <div class="item">
                         <div class="product-box">
                             <%--<div class="icon-pro">
                                 <img class="img-responsive" src="assets/images/logo3.png" alt="" />
@@ -37,7 +37,7 @@
                     </div>
                 </ItemTemplate>
                 <LayoutTemplate>
-                    <div id="silderProduct" class="list-pro">
+                    <div id="silderProduct" class="list-pro owl-carousel">
                         <span runat="server" id="itemPlaceholder" />
                     </div>
                 </LayoutTemplate>

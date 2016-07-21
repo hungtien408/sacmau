@@ -30,16 +30,8 @@ function myfunload() {
     });
     $(".menu-level li:last-child").addClass("last");
     $(".menu-level .active").find("ul:first").show();
-    $('#sliderBanner').slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnHover: false,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        arrows: false,
-        cssEase: 'linear'
+    $('#sliderBanner').nivoSlider({
+        pauseOnHover: false
     });
     $('#sliderAds').slick({
         autoplay: true,
@@ -68,35 +60,27 @@ function myfunload() {
     if ($('#silderProduct').size() == 1) {
         var silderProduct = $('#silderProduct').imagesLoaded(function () {
 
-            silderProduct.slick({
+            silderProduct.owlCarousel({
+                margin: 10,
+                loop: true,
+                margin: 10,
+                nav: true,
                 autoplay: true,
-                autoplaySpeed: 3000,
-                //cssEase: 'linear',
-                dots: false,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                //prevArrow: $(".control-slider .prev"),
-                //nextArrow: $(".control-slider .next"),
-                responsive: [
-                  {
-                      breakpoint: 639,
-                      settings: {
-                          slidesToShow: 2
-                      }
-                  },
-                  {
-                      breakpoint: 419,
-                      settings: {
-                          slidesToShow: 1
-                      }
-                  }
-                  // You can unslick at a given breakpoint now by adding:
-                  // settings: "unslick"
-                  // instead of a settings object
-                ]
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
             });
+
             silderProduct.textHeight({
                 activetit: true,
                 listcss: [{ cssname: ".product-img" }, { cssname: ".product-img" }],

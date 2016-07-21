@@ -56,9 +56,6 @@
     #banner {
         min-height: 275px;
     }
-    .note-slider {
-        width: 270px;
-    }
     .list-slider li {
         padding: 0 11px;
     }
@@ -198,9 +195,7 @@
     .title-slider img {
         max-width: 80%;
     }
-    .note-slider {
-        width: 250px;
-    }
+
     .list-slider li {
         padding: 0 10px;
         line-height: 30px;
