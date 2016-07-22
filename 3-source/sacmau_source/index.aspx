@@ -46,7 +46,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header class="intro-head">
+    <header class="intro-head">
             <div class="container">
                 <div class="row">
                     <div class="pull-right">
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </header>
-        <main class="intro-main-content">
+    <main class="intro-main-content">
 		<div class="container">
 			<div class="row">
 				<div class="intro-logo">
@@ -78,22 +78,68 @@
 				        </div>
 					</div>
 					<div class="left pull-left">
-						<div class="left-img">
-						    <a href="Default.aspx"><img src="assets/images/gdt.png" alt="" /></a></div>
-						<p><a href="Default.aspx">Giấy dán tường</a></p>
-						<div class="km-left dl-visible">
-							<p>khuyến mãi khủng</p>
-							<span><a href="Default.aspx">xem ngay</a></span>
-						</div>
+                        <asp:ListView ID="lstBannerGiay" runat="server" DataSourceID="odsBannerGiay"
+                            EnableModelValidation="True">
+                            <ItemTemplate>
+                                <div class="left-img"><a href="Default.aspx">
+                                    <img alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/gdt.png" %>' runat="server" /></a></div>
+						        <p><a href="Default.aspx">Giấy dán tường</a></p>
+						        <div class='<%# Eval("IsAvailable").ToString().Equals("True") ? "km-left dl-visible" : "km-left dl-hidden" %>'>
+							        <p>khuyến mãi khủng</p>
+							        <span><a href="Default.aspx">xem ngay</a></span>
+						        </div>
+                            </ItemTemplate>
+                            <LayoutTemplate>
+                                <span runat="server" id="itemPlaceholder" />
+                            </LayoutTemplate>
+                        </asp:ListView>
+                        <asp:ObjectDataSource ID="odsBannerGiay" runat="server" SelectMethod="AdsBannerSelectAll"
+                            TypeName="TLLib.AdsBanner">
+                            <SelectParameters>
+                                <asp:Parameter Name="StartRowIndex" Type="String" />
+                                <asp:Parameter Name="EndRowIndex" Type="String" />
+                                <asp:Parameter DefaultValue="7" Name="AdsCategoryID" Type="String" />
+                                <asp:Parameter Name="CompanyName" Type="String" />
+                                <asp:Parameter Name="Website" Type="String" />
+                                <asp:Parameter Name="FromDate" Type="String" />
+                                <asp:Parameter Name="ToDate" Type="String" />
+                                <asp:Parameter Name="IsAvailable" Type="String" />
+                                <asp:Parameter Name="Priority" Type="String" />
+                                <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                            </SelectParameters>
+                        </asp:ObjectDataSource>
 					</div>
 					<div class="right pull-right">
-						<div class="right-img">
-						    <a href="http://www.tourphongnhakebang.com/"><img src="assets/images/gdt.png" alt=""/></a></div>
-						<p><a href="http://www.tourphongnhakebang.com/">Sàn gỗ cao cấp</a></p>
-						<div class="km-right dl-hidden">
-							<p>khuyến mãi khủng</p>
-							<span><a href="http://www.tourphongnhakebang.com/">xem ngay</a></span>
-						</div>
+					    <asp:ListView ID="ListView1" runat="server" DataSourceID="odsBannerGo"
+                            EnableModelValidation="True">
+                            <ItemTemplate>
+						        <div class="right-img">
+						            <a href="http://www.tourphongnhakebang.com/"><img id="Img1" alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/gdt.png" %>' runat="server" /></a></div>
+						        <p><a href="http://www.tourphongnhakebang.com/">Sàn gỗ cao cấp</a></p>
+						        <div class='<%# Eval("IsAvailable").ToString().Equals("True") ? "km-right dl-visible" : "km-right dl-hidden" %>'>
+							        <p>khuyến mãi khủng</p>
+							        <span><a href="http://www.tourphongnhakebang.com/">xem ngay</a></span>
+						        </div>
+                        </ItemTemplate>
+                            <LayoutTemplate>
+                                <span runat="server" id="itemPlaceholder" />
+                            </LayoutTemplate>
+                        </asp:ListView>
+                        <asp:ObjectDataSource ID="odsBannerGo" runat="server" SelectMethod="AdsBannerSelectAll"
+                            TypeName="TLLib.AdsBanner">
+                            <SelectParameters>
+                                <asp:Parameter Name="StartRowIndex" Type="String" />
+                                <asp:Parameter Name="EndRowIndex" Type="String" />
+                                <asp:Parameter DefaultValue="8" Name="AdsCategoryID" Type="String" />
+                                <asp:Parameter Name="CompanyName" Type="String" />
+                                <asp:Parameter Name="Website" Type="String" />
+                                <asp:Parameter Name="FromDate" Type="String" />
+                                <asp:Parameter Name="ToDate" Type="String" />
+                                <asp:Parameter Name="IsAvailable" Type="String" />
+                                <asp:Parameter Name="Priority" Type="String" />
+                                <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                            </SelectParameters>
+                        </asp:ObjectDataSource>
 					</div>
 					<div class="intro-copyright">
 						<p>© 2016 Sac Mau - All rights reserved. Thiet Ke Web Tran Le</p>
