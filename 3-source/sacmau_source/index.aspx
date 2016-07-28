@@ -142,7 +142,7 @@
                         </asp:ObjectDataSource>
 					</div>
 					<div class="intro-copyright">
-						<p>© 2016 Sac Mau - All rights reserved. Thiet Ke Web Tran Le</p>
+						<p>© 2016 Sac Mau - All rights reserved.</p>
 					</div>
 				</div>
 			</div>
