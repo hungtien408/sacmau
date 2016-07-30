@@ -86,7 +86,7 @@
 						        <p><a href="Default.aspx">Giấy dán tường</a></p>
 						        <div class='<%# Eval("IsAvailable").ToString().Equals("True") ? "km-left dl-visible" : "km-left dl-hidden" %>'>
 							        <p>khuyến mãi khủng</p>
-							        <span><a href="Default.aspx">xem ngay</a></span>
+							        <span><a href="khuyen-mai.aspx">xem ngay</a></span>
 						        </div>
                             </ItemTemplate>
                             <LayoutTemplate>
@@ -118,7 +118,7 @@
 						        <p><a href="http://www.sangosacmau.com/">Sàn gỗ cao cấp</a></p>
 						        <div class='<%# Eval("IsAvailable").ToString().Equals("True") ? "km-right dl-visible" : "km-right dl-hidden" %>'>
 							        <p>khuyến mãi khủng</p>
-							        <span><a href="http://www.sangosacmau.com/">xem ngay</a></span>
+							        <span><a href="http://www.sangosacmau.com/khuyen-mai.aspx">xem ngay</a></span>
 						        </div>
                         </ItemTemplate>
                             <LayoutTemplate>
