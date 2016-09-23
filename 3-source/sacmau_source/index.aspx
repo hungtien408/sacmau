@@ -114,8 +114,8 @@
                             EnableModelValidation="True">
                             <ItemTemplate>
 						        <div class="right-img">
-						            <a href="http://www.sangosacmau.com/"><img id="Img1" alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/gdt.png" %>' runat="server" /></a></div>
-						        <p><a href="http://www.sangosacmau.com/">Sàn gỗ cao cấp</a></p>
+						            <a href="http://www.sangosacmau.com/Default.aspx"><img id="Img1" alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/gdt.png" %>' runat="server" /></a></div>
+						        <p><a href="http://www.sangosacmau.com/Default.aspx">Sàn gỗ cao cấp</a></p>
 						        <div class='<%# Eval("IsAvailable").ToString().Equals("True") ? "km-right dl-visible" : "km-right dl-hidden" %>'>
 							        <p>khuyến mãi khủng</p>
 							        <span><a href="http://www.sangosacmau.com/khuyen-mai.aspx">xem ngay</a></span>

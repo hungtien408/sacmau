@@ -15,6 +15,7 @@ window.onload = function () {
     // Creating a map
     var options = {
         zoom: 17,
+        scrollwheel: false,
         center: new google.maps.LatLng(lat, long),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
